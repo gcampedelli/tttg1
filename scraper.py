@@ -2,7 +2,6 @@
 
 import scraperwiki
 import json
-import twitter
 from datetime import datetime, timedelta
 from collections import Counter
 from collections import OrderedDict
@@ -183,7 +182,7 @@ for textcontent in result2:
             newtext  = newtext +", "+ htmlcodes[funnychars.index(char)]
 print newtext
 
-to = ['daniela.pereira@tvglobo.com.br', 'carolina.russell@tvglobo.com.br', 'dominique.ferreira@tvglobo.com.br', 'miriam.paco@tvglobo.com.br', 'thais.padua@tvglobo.com.br']
+to = ['gabriela@sagaz.in']
 gmail_user = 'alertatttwitter@gmail.com'
 gmail_pwd = 'alertaglobottt'
 smtpserver = smtplib.SMTP("smtp.gmail.com",587)
@@ -196,7 +195,7 @@ print header
 msg = header + '\n Existe TT Globo no BRASIL \n\n' + newtext[1:].encode('ISO-8859-1')
 smtpserver.sendmail(gmail_user, to, msg)
 print 'done!'
-to = ['carlosafjr@gmail.com', 'alertatttwitter@gmail.com']
+to = ['alertatttwitter@gmail.com']
 gmail_user = 'alertatttwitter@gmail.com'
 gmail_pwd = 'alertaglobottt'
 smtpserver = smtplib.SMTP("smtp.gmail.com",587)
