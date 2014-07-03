@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import scraperwiki
-import twitter
 import json
 import sys
 import dumptruck
@@ -21,9 +20,9 @@ def oauth_login():
     CONSUMER_SECRET = '8ycYDDf0E4MpdplgsMqGyo8zJQqDeXO9OBKyLfPa9kcHyptunP'
     OAUTH_TOKEN = '2489249527-GoO6xgo3KGNTBDIdSMVeHoOBY134nL7GIRMxX7H'
     OAUTH_TOKEN_SECRET = 'SxuJKNQOWtNECMLIdEHlRn1KQCPNlZVi7UVbdNiOSWbTb'
-    auth = twitter.oauth.OAuth(OAUTH_TOKEN, OAUTH_TOKEN_SECRET,CONSUMER_KEY, CONSUMER_SECRET)
+    auth = scraperwiki.oauth.OAuth(OAUTH_TOKEN, OAUTH_TOKEN_SECRET,CONSUMER_KEY, CONSUMER_SECRET)
 
-    twitter_api = twitter.Twitter(auth=auth) 
+    twitter_api = scraperwiki.Twitter(auth=auth) 
     return twitter_api
     # Sample usage
     twitter_api = oauth_login()
